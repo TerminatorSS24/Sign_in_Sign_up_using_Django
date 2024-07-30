@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #heading {
+        position: absolute;
+        left: 100px;
+        top: 10px;
+      }
+      body {
+        font-family: "Kalam";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('{% static "wallpaper.jpg" %}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        color: white;
+      }
+      .landing-container {
+        text-align: center;
+        /* background: rgba(0, 0, 0, 0.7); */
+        padding: 20px;
+        border-radius: 8px;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        backdrop-filter: blur(100px);
+      }
+      a {
+        color: yellow;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Terminator's Area</h1>
+    <div class="landing-container">
+      <h1>Welcome to the Landing Page</h1>
+      <p>Congratulations, you have successfully logged in!</p>
+      <a href="{% url 'login'%}">Log Out</a>
+    </div>
+  </body>
+</html>
